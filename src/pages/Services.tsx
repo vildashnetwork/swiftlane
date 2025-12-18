@@ -148,7 +148,7 @@ const Services = () => {
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link to="/contact">
-                      <Button variant="cta" size="lg" className="gap-2">
+                      <Button size="lg" className="gap-2">
                         Get a Quote <ArrowRight className="h-5 w-5" />
                       </Button>
                     </Link>
@@ -185,12 +185,12 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button variant="white" size="xl" className="gap-2">
+                <Button variant="secondary" size="lg" className="gap-2">
                   Request a Quote <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
               <a href="mailto:info@logisticsnorthwest.com">
-                <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 gap-2">
+                <Button variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 gap-2">
                   <Mail className="h-5 w-5" /> Email Us
                 </Button>
               </a>

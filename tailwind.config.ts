@@ -51,6 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        corporate: {
+          dark: "hsl(var(--corporate-dark))",
+          light: "hsl(var(--corporate-light))",
+          accent: "hsl(var(--corporate-accent))",
+          "accent-hover": "hsl(var(--corporate-accent-hover))",
+          text: "hsl(var(--corporate-text))",
+          "text-muted": "hsl(var(--corporate-text-muted))",
+          border: "hsl(var(--corporate-border))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -61,20 +70,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        orange: {
-          light: "hsl(var(--orange-light))",
-          glow: "hsl(var(--orange-glow))",
-        },
-        dark: "hsl(var(--dark))",
-        gray: {
-          light: "hsl(var(--gray-light))",
-          medium: "hsl(var(--gray-medium))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        button: "var(--shadow-button)",
       },
       keyframes: {
         "accordion-down": {
@@ -85,26 +91,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        pulse: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.7" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 3s ease-in-out infinite",
-        pulse: "pulse 2s ease-in-out infinite",
-      },
-      boxShadow: {
-        card: "var(--shadow-card)",
-        "card-hover": "var(--shadow-card-hover)",
-        button: "var(--shadow-button)",
-        hero: "var(--shadow-hero)",
       },
     },
   },
