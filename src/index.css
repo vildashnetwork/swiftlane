@@ -7,24 +7,24 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 25% 20%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 20%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 20%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 210 85% 45%;
+    --primary: 12 96% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 220 25% 20%;
+    --secondary: 30 100% 42%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 210 85% 45%;
+    --accent: 12 96% 54%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -32,24 +32,27 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 210 85% 45%;
+    --ring: 12 96% 54%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Corporate muted palette */
-    --corporate-dark: 220 25% 18%;
-    --corporate-light: 220 14% 97%;
-    --corporate-accent: 210 85% 45%;
-    --corporate-accent-hover: 210 85% 38%;
-    --corporate-text: 220 25% 20%;
-    --corporate-text-muted: 220 10% 50%;
-    --corporate-border: 220 13% 88%;
+    /* Custom logistics colors */
+    --orange-light: 12 96% 95%;
+    --orange-glow: 12 96% 54%;
+    --dark: 220 20% 12%;
+    --gray-light: 220 14% 97%;
+    --gray-medium: 220 10% 75%;
 
-    /* Shadows - subtle and professional */
-    --shadow-sm: 0 1px 3px hsl(220 25% 20% / 0.05);
-    --shadow-md: 0 4px 12px hsl(220 25% 20% / 0.08);
-    --shadow-lg: 0 8px 24px hsl(220 25% 20% / 0.1);
-    --shadow-button: 0 2px 8px hsl(210 85% 45% / 0.25);
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 12% / 0.85) 0%, hsl(12 96% 54% / 0.75) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(12 96% 54%) 0%, hsl(30 100% 42%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(220 20% 12% / 0.08);
+    --shadow-card-hover: 0 12px 40px -8px hsl(12 96% 54% / 0.2);
+    --shadow-button: 0 4px 14px -2px hsl(12 96% 54% / 0.4);
+    --shadow-hero: 0 20px 60px -15px hsl(220 20% 12% / 0.3);
 
     /* Fonts */
     --font-heading: 'Poppins', sans-serif;
@@ -62,29 +65,29 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 210 85% 45%;
+    --sidebar-ring: 12 96% 54%;
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 220 20% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 220 25% 12%;
+    --card: 220 20% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 25% 12%;
+    --popover: 220 20% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 85% 50%;
+    --primary: 12 96% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 30 100% 42%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 20% 18%;
     --muted-foreground: 220 10% 65%;
 
-    --accent: 210 85% 50%;
+    --accent: 12 96% 54%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
@@ -92,16 +95,16 @@
 
     --border: 220 20% 18%;
     --input: 220 20% 18%;
-    --ring: 210 85% 50%;
+    --ring: 12 96% 54%;
 
-    --sidebar-background: 220 25% 10%;
+    --sidebar-background: 220 20% 10%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 210 85% 50%;
+    --sidebar-primary: 12 96% 54%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 20% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 210 85% 50%;
+    --sidebar-ring: 12 96% 54%;
   }
 }
 
@@ -115,7 +118,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight;
+    @apply font-heading font-bold tracking-tight;
   }
 }
 
@@ -124,36 +127,59 @@
     @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .section-padding {
-    @apply py-16 md:py-20;
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-heading font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    background: var(--gradient-cta);
+    box-shadow: var(--shadow-button);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px -4px hsl(12 96% 54% / 0.5);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-heading font-semibold border-2 border-primary text-primary bg-transparent transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
   }
 
   .card-service {
-    @apply bg-card rounded-lg p-6 transition-all duration-200 border border-border;
-    box-shadow: var(--shadow-sm);
+    @apply bg-card rounded-xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-card);
   }
 
   .card-service:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
   }
 
-  .input-field {
-    @apply w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  .section-padding {
+    @apply py-16 md:py-24;
   }
 
-  .form-label {
-    @apply block text-sm font-medium text-foreground mb-2;
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-cta);
   }
 }
 
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.5s ease-out forwards;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
   }
 
   @keyframes fadeIn {
@@ -162,7 +188,22 @@
   }
 
   @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
   }
 }

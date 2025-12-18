@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Truck, Warehouse, Users, Trash2, PackageCheck, Star, Quote, CheckCircle } from "lucide-react";
+import { ArrowRight, Truck, Warehouse, Users, Trash2, PackageCheck, Star, Quote, Shield, Clock, Award, HeartHandshake } from "lucide-react";
 import { useState, useEffect } from "react";
-import QuoteForm from "@/components/QuoteForm";
 import heroImage from "@/assets/hero-logistics.jpg";
 
 const services = [
@@ -51,11 +50,27 @@ const testimonials = [
   },
 ];
 
-const features = [
-  "24/7 Customer Support",
-  "Real-time Tracking",
-  "Competitive Pricing",
-  "Local Expertise",
+const valueProps = [
+  {
+    icon: Shield,
+    title: "Dedicated Local Service",
+    description: "Deep knowledge of the North West region ensures efficient routes and timely deliveries",
+  },
+  {
+    icon: Award,
+    title: "Quality Assurance",
+    description: "Rigorous standards and professional handling for all your logistics needs",
+  },
+  {
+    icon: Clock,
+    title: "Flexible Options",
+    description: "24/7 availability with customizable solutions to match your schedule",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Exceptional Customer Care",
+    description: "Dedicated support team committed to your complete satisfaction",
+  },
 ];
 
 const Index = () => {
@@ -71,55 +86,58 @@ const Index = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-corporate-dark/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-primary/40" />
         </div>
         
         <div className="container-logistics relative z-10 py-20">
-          <div className="max-w-2xl animate-slide-up">
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-background mb-6 leading-tight">
-              Reliable Logistics Solutions for the{" "}
+          <div className="max-w-3xl animate-slide-up">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full font-heading font-medium text-sm mb-6 backdrop-blur-sm">
+              Trusted Logistics Partner Since Day One
+            </span>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-background mb-6 leading-tight">
+              Delivering Excellence Across the{" "}
               <span className="text-primary">North West</span>
             </h1>
-            <p className="text-lg text-background/80 mb-8 max-w-xl">
-              Your trusted partner for transportation, warehousing, and comprehensive logistics services. Available 24/7 to serve your business needs.
+            <p className="text-lg sm:text-xl text-background/80 mb-8 max-w-2xl leading-relaxed">
+              Your reliable partner for transportation, warehousing, and comprehensive logistics solutions. Available 24/7 to serve your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link to="#quote">
-                <Button size="lg" className="gap-2">
-                  Get a Quote <ArrowRight className="h-4 w-4" />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <Button variant="cta" size="xl" className="gap-2">
+                  Get a Quote! <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" size="lg" className="bg-transparent border-background text-background hover:bg-background hover:text-foreground">
+                <Button variant="outline" size="xl" className="bg-background/10 border-background text-background hover:bg-background hover:text-foreground">
                   Our Services
                 </Button>
               </Link>
             </div>
-            
-            {/* Quick Features */}
-            <div className="flex flex-wrap gap-4 mt-8">
-              {features.map((feature) => (
-                <div key={feature} className="flex items-center gap-2 text-background/90 text-sm">
-                  <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+          <div className="w-6 h-10 rounded-full border-2 border-background/50 flex items-start justify-center p-2">
+            <div className="w-1.5 h-3 bg-background/50 rounded-full animate-pulse" />
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-muted">
         <div className="container-logistics">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-3">
-              Our Services
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full font-heading font-medium text-sm mb-4">
+              What We Offer
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Our Key Services
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Comprehensive logistics solutions tailored to meet your business requirements
@@ -127,15 +145,16 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <div
                 key={service.title}
-                className="card-service group cursor-pointer"
+                className="card-service bg-card group cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-md flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
-                  <service.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-secondary transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                <h3 className="font-heading font-bold text-lg text-foreground mb-2">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -145,62 +164,99 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <Link to="/services">
               <Button variant="outline" size="lg" className="gap-2">
-                View All Services <ArrowRight className="h-4 w-4" />
+                View All Services <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Quote Form Section */}
-      <QuoteForm />
-
-      {/* Testimonials Section */}
+      {/* Why Choose Us Section */}
       <section className="section-padding bg-background">
         <div className="container-logistics">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-3">
-              What Our Clients Say
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full font-heading font-medium text-sm mb-4">
+              Why Choose Us
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              The Logistics North West Difference
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              We go above and beyond to ensure your logistics needs are met with excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {valueProps.map((prop, index) => (
+              <div
+                key={prop.title}
+                className="text-center group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-button">
+                  <prop.icon className="h-10 w-10 text-primary-foreground" />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-foreground mb-3">
+                  {prop.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {prop.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section-padding bg-foreground text-background">
+        <div className="container-logistics">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full font-heading font-medium text-sm mb-4">
+              Testimonials
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-background/70 text-lg max-w-2xl mx-auto">
               Don't just take our word for it — hear from businesses we've helped
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-muted rounded-lg p-8 md:p-10 relative">
-              <Quote className="absolute top-6 left-6 h-10 w-10 text-primary/20" />
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-background/5 rounded-3xl p-8 md:p-12 backdrop-blur-sm border border-background/10">
+              <Quote className="absolute top-6 left-6 h-12 w-12 text-primary/30" />
               
               <div className="relative z-10">
-                <div className="flex justify-center gap-1 mb-4">
+                <div className="flex justify-center gap-1 mb-6">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    <Star key={i} className="h-6 w-6 fill-primary text-primary" />
                   ))}
                 </div>
                 
-                <p className="text-lg md:text-xl text-center text-foreground mb-6 leading-relaxed">
+                <p className="text-xl md:text-2xl text-center mb-8 leading-relaxed italic">
                   "{testimonials[currentTestimonial].quote}"
                 </p>
                 
-                <p className="text-center font-medium text-primary">
+                <p className="text-center font-heading font-semibold text-primary text-lg">
                   — {testimonials[currentTestimonial].author}
                 </p>
               </div>
             </div>
 
             {/* Testimonial Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
+            <div className="flex justify-center gap-3 mt-8">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentTestimonial
-                      ? "bg-primary w-6"
-                      : "bg-border hover:bg-muted-foreground"
+                      ? "bg-primary w-8"
+                      : "bg-background/30 hover:bg-background/50"
                   }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
@@ -210,26 +266,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="section-padding bg-corporate-dark text-background">
-        <div className="container-logistics text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-background/80 text-lg mb-8 max-w-xl mx-auto">
-            Contact us today for a free consultation and quote. Our team is available 24/7 to assist you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="gap-2">
-                Contact Us <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-            <a href="tel:+443330497891">
-              <Button variant="outline" size="lg" className="bg-transparent border-background text-background hover:bg-background hover:text-foreground">
-                Call +44 333 049 7891
-              </Button>
-            </a>
+      {/* Stats Section */}
+      <section className="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div className="container-logistics">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-primary-foreground">
+            {[
+              { value: "500+", label: "Happy Clients" },
+              { value: "24/7", label: "Availability" },
+              { value: "10K+", label: "Deliveries" },
+              { value: "99%", label: "On-Time Rate" },
+            ].map((stat) => (
+              <div key={stat.label} className="group">
+                <p className="font-heading text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform">
+                  {stat.value}
+                </p>
+                <p className="text-primary-foreground/80 font-medium">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
