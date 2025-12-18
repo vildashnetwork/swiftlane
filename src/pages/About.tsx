@@ -182,7 +182,7 @@ const About = () => {
               </div>
 
               <Link to="/contact" className="block mt-8">
-                <Button variant="cta" size="lg" className="w-full gap-2">
+                <Button size="lg" className="w-full gap-2">
                   Get a Quote! <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>

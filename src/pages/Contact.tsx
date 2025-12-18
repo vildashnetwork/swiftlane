@@ -210,8 +210,7 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    variant="cta"
-                    size="xl"
+                    size="lg"
                     className="w-full sm:w-auto gap-2"
                     disabled={isSubmitting}
                   >
