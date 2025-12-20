@@ -41,11 +41,11 @@ const Footer = () => {
               Get a Quote! <ArrowRight className="h-5 w-5" />
             </Link>
             <a
-              href="tel:+443330497891"
+              href="tel:+1 719-629-5764"
               className="inline-flex items-center gap-2 text-primary-foreground font-heading font-semibold hover:underline"
             >
               <Phone className="h-5 w-5" />
-              +44 333 049 7891
+              +1 719-629-5764
             </a>
           </div>
         </div>
@@ -59,9 +59,9 @@ const Footer = () => {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-heading font-bold">LN</span>
+                  <span className="text-primary-foreground font-heading font-bold">SL</span>
                 </div>
-                <span className="font-heading font-bold text-xl">Logistics North West</span>
+                <span className="font-heading font-bold text-xl">SwiftLane Logistics</span>
               </div>
               <p className="text-background/70 mb-6 leading-relaxed">
                 Your trusted partner for comprehensive logistics solutions across the North West region. Available 24/7.
@@ -137,26 +137,23 @@ const Footer = () => {
             <div>
               <h3 className="font-heading font-bold text-lg mb-6">Contact Us</h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-background/70">Unit 6, Neville, Neville St, Oldham OL9 6LD</span>
-                </li>
+
                 <li>
-                  <a href="tel:+443330497891" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
+                  <a href="tel:+1 719-629-5764" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
                     <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                    +44 333 049 7891
+                    +1 719-629-5764
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+447441357041" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
+                  <a href="tel:+1 719-629-5764" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
                     <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                    +44 7441 357041
+                    +1 719-629-5764
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@logisticsnorthwest.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
+                  <a href="mailto:swiftlane@gmail.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
                     <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                    info@logisticsnorthwest.com
+                 swiftlane@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
@@ -174,7 +171,7 @@ const Footer = () => {
         <div className="container-logistics">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm">
-              © {new Date().getFullYear()} Logistics North West. All rights reserved.
+              © {new Date().getFullYear()} SwiftLane Logistics. All rights reserved.
             </p>
             <div className="flex gap-6">
               {policies.map((policy) => (

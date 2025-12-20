@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, Warehouse, Users, Trash2, PackageCheck, Star, Quote, Shield, Clock, Award, HeartHandshake } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroImage from "@/assets/hero-logistics.jpg";
+// import heroImage from "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240766/trash_reports/mf22kqsctv9igff3h6mq.jpg";
+const heroImage = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240766/trash_reports/mf22kqsctv9igff3h6mq.jpg";
 
 const services = [
   {
@@ -73,6 +74,7 @@ const valueProps = [
   },
 ];
 
+
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
@@ -82,7 +84,11 @@ const Index = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
+  const [code, setcode] = useState<string>("");
+  const navigate = useNavigate()
+  const sendcode = () => {
+    navigate("/track/1212");
+  }
   return (
     <main>
       {/* Hero Section */}
@@ -93,7 +99,7 @@ const Index = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-primary/40" />
         </div>
-        
+
         <div className="container-logistics relative z-10 py-20">
           <div className="max-w-3xl animate-slide-up">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full font-heading font-medium text-sm mb-6 backdrop-blur-sm">
@@ -103,6 +109,27 @@ const Index = () => {
               Delivering Excellence Across the{" "}
               <span className="text-primary">North West</span>
             </h1>
+
+            <div onClick={() => navigate("/track/e232")} className="flex flex-row md:flex-row items-center justify-center gap-4 max-w-lg mx-auto mt-10">
+
+              <input
+                type="text"
+                value={code}
+                onChange={(e) => setcode(e.target.value)}
+                placeholder="Enter tracking code"
+                className="flex-1 px-5 py-4 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 placeholder-gray-400 text-gray-800"
+              />
+
+              <button onClick={sendcode} className="px-5 py-4 bg-primary text-white font-semibold rounded-r-md hover:bg-primary/12 focus:outline-none focus:ring-2 focus:bg-primary transition duration-200">
+                Track
+              </button>
+            </div>
+
+
+
+
+
+
             <p className="text-lg sm:text-xl text-background/80 mb-8 max-w-2xl leading-relaxed">
               Your reliable partner for transportation, warehousing, and comprehensive logistics solutions. Available 24/7 to serve your business needs.
             </p>
@@ -229,18 +256,18 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative bg-background/5 rounded-3xl p-8 md:p-12 backdrop-blur-sm border border-background/10">
               <Quote className="absolute top-6 left-6 h-12 w-12 text-primary/30" />
-              
+
               <div className="relative z-10">
                 <div className="flex justify-center gap-1 mb-6">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                     <Star key={i} className="h-6 w-6 fill-primary text-primary" />
                   ))}
                 </div>
-                
+
                 <p className="text-xl md:text-2xl text-center mb-8 leading-relaxed italic">
                   "{testimonials[currentTestimonial].quote}"
                 </p>
-                
+
                 <p className="text-center font-heading font-semibold text-primary text-lg">
                   — {testimonials[currentTestimonial].author}
                 </p>
@@ -253,11 +280,10 @@ const Index = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial
-                      ? "bg-primary w-8"
-                      : "bg-background/30 hover:bg-background/50"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial
+                    ? "bg-primary w-8"
+                    : "bg-background/30 hover:bg-background/50"
+                    }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
               ))}

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Phone, Clock, Target, Eye, Award, CheckCircle2 } from "lucide-react";
-import aboutTeamImage from "@/assets/about-team.jpg";
+// import aboutTeamImage from "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240534/trash_reports/cty2zjbjbwmd6ejejaxw.jpg";
 
 const About = () => {
+  const aboutTeamImage = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240534/trash_reports/cty2zjbjbwmd6ejejaxw.jpg";
+
   const values = [
     {
       icon: Target,
@@ -53,20 +55,20 @@ const About = () => {
             {/* Content */}
             <div className="animate-slide-in-left">
               <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full font-heading font-medium text-sm mb-6">
-                About Logistics North West
+                About SwiftLane Logistics
               </span>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Your Trusted <span className="text-primary">Logistics Partner</span> in the North West
+                Your Trusted <span className="text-primary">SwiftLane Logistics Partner</span>
               </h1>
               <div className="prose prose-lg text-muted-foreground space-y-4 leading-relaxed">
                 <p>
-                  Logistics North West is a locally owned and operated logistics company based in Oldham, serving businesses and individuals across the Greater Manchester area and beyond. We pride ourselves on understanding the unique needs of businesses in the North West, from local deliveries in Oldham to regional distribution across Yorkshire and Lancashire.
+                  SwiftLane Logistics is a locally owned and operated logistics company based in Oldham, serving businesses and individuals across the Greater Manchester area and beyond. We pride ourselves on understanding the unique needs of businesses in the North West, from local deliveries in Oldham to regional distribution across Yorkshire and Lancashire.
                 </p>
                 <p>
                   Our team brings years of hands-on experience in transport, warehousing, and supply chain management. Whether you're moving a single pallet or require a full-scale logistics solution, we treat every job with the same commitment to quality and reliability.
                 </p>
                 <p>
-                  At Logistics North West, we believe great logistics is about more than just moving goods — it's about building relationships, understanding your business, and delivering peace of mind. That's why we offer 24/7 support, transparent pricing, and tailored solutions that grow with you.
+                  At SwiftLane Logistics, we believe great logistics is about more than just moving goods — it's about building relationships, understanding your business, and delivering peace of mind. That's why we offer 24/7 support, transparent pricing, and tailored solutions that grow with you.
                 </p>
               </div>
             </div>
@@ -151,10 +153,7 @@ const About = () => {
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="font-heading font-semibold mb-1">Address</p>
-                    <p className="text-background/70">Unit 6, Neville, Neville St, Oldham OL9 6LD</p>
-                  </div>
+
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -162,11 +161,11 @@ const About = () => {
                   </div>
                   <div>
                     <p className="font-heading font-semibold mb-1">Phone</p>
-                    <a href="tel:+443330497891" className="text-background/70 hover:text-primary transition-colors block">
-                      +44 333 049 7891
+                    <a href="tel:+1 719-629-5764" className="text-background/70 hover:text-primary transition-colors block">
+                      +1 719-629-5764
                     </a>
-                    <a href="tel:+447441357041" className="text-background/70 hover:text-primary transition-colors block">
-                      +44 7441 357041
+                    <a href="tel:+1 719-629-5764" className="text-background/70 hover:text-primary transition-colors block">
+                      +1 719-629-5764
                     </a>
                   </div>
                 </div>

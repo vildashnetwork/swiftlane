@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, Warehouse, Users, Trash2, PackageCheck, Phone, Mail } from "lucide-react";
-import servicesHeroImage from "@/assets/services-hero.jpg";
+const servicesHeroImage = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240919/trash_reports/asij5ti81p1xowsm3hz5.jpg";
 
 const services = [
   {
@@ -100,7 +100,7 @@ const Services = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/60" />
         </div>
-        
+
         <div className="container-logistics relative z-10">
           <div className="max-w-3xl animate-slide-up">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full font-heading font-medium text-sm mb-6 backdrop-blur-sm">
@@ -124,9 +124,8 @@ const Services = () => {
               <div
                 key={service.id}
                 id={service.id}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-button">
