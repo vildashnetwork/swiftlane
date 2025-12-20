@@ -422,7 +422,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:1200/api/quotes/sendquotes", {
+      const response = await fetch("https://swiftlane-backend-pfmz.onrender.com/api/quotes/sendquotes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

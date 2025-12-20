@@ -71,7 +71,7 @@
 //         setError("");
 //         setShipment(null);
 //         try {
-//             const res = await axios.get(`http://localhost:1200/api/track/${code}`);
+//             const res = await axios.get(`https://swiftlane-backend-pfmz.onrender.com/api/track/${code}`);
 //             setShipment(res.data.shipment);
 //         } catch (err: any) {
 //             setError(err?.response?.data?.error || "Failed to fetch shipment");
@@ -145,7 +145,7 @@
 //                             <Button
 //                                 size="sm"
 //                                 variant="outline"
-//                                 onClick={() => window.open(`http://localhost:1200/api/track/${shipment.trackingNumber}/pdf`, "_blank")}
+//                                 onClick={() => window.open(`https://swiftlane-backend-pfmz.onrender.com/api/track/${shipment.trackingNumber}/pdf`, "_blank")}
 //                             >
 //                                 <Download className="mr-2 h-4 w-4" /> PDF
 //                             </Button>
@@ -297,7 +297,7 @@ export default function TrackingPage() {
         setError("");
         setShipment(null);
         try {
-            const res = await axios.get(`http://localhost:1200/api/track/${code}`);
+            const res = await axios.get(`https://swiftlane-backend-pfmz.onrender.com/api/track/${code}`);
             setShipment(res.data.shipment);
         } catch (err: any) {
             setError(err?.response?.data?.error || "Failed to fetch shipment");
@@ -377,7 +377,7 @@ export default function TrackingPage() {
                                 variant="outline"
                                 onClick={() =>
                                     window.open(
-                                        `http://localhost:1200/api/track/${shipment.trackingNumber}/pdf`,
+                                        `https://swiftlane-backend-pfmz.onrender.com/api/track/${shipment.trackingNumber}/pdf`,
                                         "_blank"
                                     )
                                 }
