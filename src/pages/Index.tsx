@@ -4,6 +4,12 @@ import { ArrowRight, Truck, Warehouse, Users, Trash2, PackageCheck, Star, Quote,
 import { useState, useEffect } from "react";
 // import heroImage from "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240766/trash_reports/mf22kqsctv9igff3h6mq.jpg";
 const heroImage = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240766/trash_reports/mf22kqsctv9igff3h6mq.jpg";
+const secondimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297070/trash_reports/nduijk8jfeiiv4mv9m1y.jpg"
+const thirdimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297147/trash_reports/mmvpsrpfeuknhjywtek3.jpg"
+const fourthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297201/trash_reports/tjsdqtzcbjyu5viochd8.jpg"
+const fifthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297257/trash_reports/wbq1wk1gewuaqzuovqhy.jpg"
+const logo = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297301/trash_reports/kycxjskvgzteh9mlqgse.jpg"
+const sixthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297347/trash_reports/lxrnieqziahhcc2dbd7e.jpg"
 
 const services = [
   {
@@ -156,6 +162,7 @@ const Index = () => {
         </div>
       </section>
 
+
       {/* Services Section */}
       <section className="section-padding bg-muted">
         <div className="container-logistics">
@@ -201,6 +208,24 @@ const Index = () => {
         </div>
       </section>
 
+      <img
+        src={logo}
+        alt="Logistics North West professional team in warehouse"
+        className="rounded-2xl shadow-hero w-full h-auto"
+      />
+      <div className="animate-slide-in-right">
+        <div className="relative">
+          <img
+            src={secondimg}
+            alt="Logistics North West professional team in warehouse"
+            className="rounded-2xl shadow-hero w-full h-auto"
+          />
+          <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary to-secondary text-primary-foreground p-6 rounded-xl shadow-card">
+            <p className="font-heading font-bold text-3xl">24/7</p>
+            <p className="text-primary-foreground/80">Always Available</p>
+          </div>
+        </div>
+      </div>
       {/* Why Choose Us Section */}
       <section className="section-padding bg-background">
         <div className="container-logistics">
@@ -237,6 +262,29 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+      <div className="animate-slide-in-right">
+        <div className="relative">
+          <img
+            src={heroImage}
+            alt="Logistics North West professional team in warehouse"
+            className="rounded-2xl shadow-hero w-full h-auto"
+          />
+          <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary to-secondary text-primary-foreground p-6 rounded-xl shadow-card">
+            <p className="font-heading font-bold text-3xl">24/7</p>
+            <p className="text-primary-foreground/80">Always Available</p>
+          </div>
+        </div>
+      </div>
+
+
 
       {/* Testimonials Section */}
       <section className="section-padding bg-foreground text-background">
