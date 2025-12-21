@@ -10,6 +10,7 @@ const fifthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297257/
 const logo = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297301/trash_reports/kycxjskvgzteh9mlqgse.jpg"
 const sixthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297347/trash_reports/lxrnieqziahhcc2dbd7e.jpg"
 
+
 const services = [
   {
     id: "transportation",

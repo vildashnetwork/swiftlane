@@ -2,7 +2,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, Warehouse, Users, Trash2, PackageCheck, Star, Quote, Shield, Clock, Award, HeartHandshake } from "lucide-react";
 import { useState, useEffect } from "react";
-// import heroImage from "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240766/trash_reports/mf22kqsctv9igff3h6mq.jpg";
+
+
+
 const heroImage = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766240766/trash_reports/mf22kqsctv9igff3h6mq.jpg";
 const secondimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297070/trash_reports/nduijk8jfeiiv4mv9m1y.jpg"
 const thirdimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297147/trash_reports/mmvpsrpfeuknhjywtek3.jpg"
