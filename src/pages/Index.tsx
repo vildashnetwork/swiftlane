@@ -115,7 +115,7 @@ const Index = () => {
             </span>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-background mb-6 leading-tight">
               We’ve Got You Covered.
-Smart Shipping Solutions for a 
+Smart Shipping Solutions for a {" "}
               <span className="text-primary">Moving World.</span>
             </h1>
 
