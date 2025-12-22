@@ -12,6 +12,7 @@ const fourthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297201
 const fifthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297257/trash_reports/wbq1wk1gewuaqzuovqhy.jpg"
 const logo = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297301/trash_reports/kycxjskvgzteh9mlqgse.jpg"
 const sixthimg = "https://res.cloudinary.com/dw78mqtz3/image/upload/v1766297347/trash_reports/lxrnieqziahhcc2dbd7e.jpg"
+const poppy = "https://res.cloudinary.com/dznitipi9/image/upload/v1766398073/mroc7jgsz4nfxhloa5sa.jpg"
 
 const services = [
   {
@@ -216,6 +217,7 @@ Smart Shipping Solutions for a {" "}
         alt="Logistics North West professional team in warehouse"
         className="rounded-2xl shadow-hero w-full h-auto"
       />
+      
       <div className="animate-slide-in-right">
         <div className="relative">
           <img
@@ -229,6 +231,7 @@ Smart Shipping Solutions for a {" "}
           </div>
         </div>
       </div>
+     
       {/* Why Choose Us Section */}
       <section className="section-padding bg-background">
         <div className="container-logistics">
@@ -244,6 +247,22 @@ Smart Shipping Solutions for a {" "}
             </p>
           </div>
 
+          
+               <div className="animate-slide-in-right">
+        <div className="relative">
+          <img
+            src={poppy}
+            alt="Logistics North West professional team in warehouse"
+            className="rounded-2xl shadow-hero w-full h-auto"
+          />
+          <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary to-secondary text-primary-foreground p-6 rounded-xl shadow-card">
+            <p className="font-heading font-bold text-3xl">24/7</p>
+            <p className="text-primary-foreground/80">Always Available</p>
+          </div>
+        </div>
+      </div>
+
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {valueProps.map((prop, index) => (
               <div
