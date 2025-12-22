@@ -165,7 +165,7 @@ const Services = () => {
                         Get a Quote <ArrowRight className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <a href="tel:+443330497891">
+                    <a href="tel: +17196295764">
                       <Button variant="outline" size="lg" className="gap-2">
                         <Phone className="h-5 w-5" /> Call Us
                       </Button>
@@ -217,7 +217,7 @@ const Services = () => {
                   Request a Quote <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
-              <a href="mailto:info@logisticsnorthwest.com">
+              <a href="mailto:swiftlanelogisticsagency@gmail.com">
                 <Button variant="outline" size="xl" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 gap-2">
                   <Mail className="h-5 w-5" /> Email Us
                 </Button>

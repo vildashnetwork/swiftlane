@@ -36,9 +36,9 @@ const Header = () => {
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+1 719-629-5764</span>
               </a>
-              <a href="mailto:swiftlane@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="mailto:swiftlanelogisticsagency@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>swiftlane@gmail.com
+                <span>swiftlanelogisticsagency@gmail.com
 </span>
               </a>
             </div>
@@ -126,9 +126,9 @@ const Header = () => {
                   <MapPin className="h-4 w-4 text-primary" />
                   <span>Unit 6, Neville St, Oldham OL9 6LD</span>
                 </div>
-                <a href="tel:+443330497891" className="flex items-center gap-2 hover:text-primary">
+                <a href="tel:+17196295764" className="flex items-center gap-2 hover:text-primary">
                   <Phone className="h-4 w-4 text-primary" />
-                  <span>+44 333 049 7891</span>
+                  <span>+1 719-629-5764</span>
                 </a>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-primary" />

@@ -144,16 +144,11 @@ const Footer = () => {
                     +1 719-629-5764
                   </a>
                 </li>
+            
                 <li>
-                  <a href="tel:+1 719-629-5764" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
-                    <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                    +1 719-629-5764
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:swiftlane@gmail.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
+                  <a href="mailto:swiftlanelogisticsagency@gmail.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
                     <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                 swiftlane@gmail.com
+                 swiftlanelogisticsagency@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">

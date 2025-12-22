@@ -164,9 +164,7 @@ const About = () => {
                     <a href="tel:+1 719-629-5764" className="text-background/70 hover:text-primary transition-colors block">
                       +1 719-629-5764
                     </a>
-                    <a href="tel:+1 719-629-5764" className="text-background/70 hover:text-primary transition-colors block">
-                      +1 719-629-5764
-                    </a>
+                
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

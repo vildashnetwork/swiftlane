@@ -843,12 +843,7 @@ const Contact = () => {
                       >
                         +1 719-629-5764
                       </a>
-                      <a
-                        href="tel:+1 719-629-5764"
-                        className="text-background/70 hover:text-primary transition-colors block"
-                      >
-                        +1 719-629-5764
-                      </a>
+                      
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -858,10 +853,10 @@ const Contact = () => {
                     <div>
                       <p className="font-heading font-semibold mb-1">Email</p>
                       <a
-                        href="mailto:swiftlane@gmail.com"
+                        href="mailto:swiftlanelogisticsagency@gmail.com"
                         className="text-background/70 hover:text-primary transition-colors"
                       >
-                        swiftlane@gmail.com
+                     swiftlanelogisticsagency@gmail.com
                       </a>
                     </div>
                   </div>

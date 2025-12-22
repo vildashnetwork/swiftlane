@@ -415,7 +415,7 @@ export default function TrackingPagePro({ initialId }: { initialId?: string }) {
               <div className="bg-gradient-to-r from-indigo-600 to-sky-500 text-white rounded-xl p-4 shadow-md">
                 <p className="text-sm opacity-90">Need help with this shipment?</p>
                 <h3 className="text-lg font-semibold mt-2">Contact Operations</h3>
-                <p className="text-sm mt-1 opacity-90">Phone:  +1 719-629-5764</p>
+                <p className="text-sm mt-1 opacity-90">Phone:  +17196295764</p>
                 <div className="mt-3">
                   <Button onClick={() => window.location.href = `tel: +1 719-629-5764`}>Call Now</Button>
                 </div>
