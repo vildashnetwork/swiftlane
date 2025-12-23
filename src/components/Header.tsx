@@ -122,10 +122,7 @@ const Header = () => {
 
               {/* Mobile Contact Info */}
               <div className="mt-6 pt-4 border-t border-border space-y-3 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>Unit 6, Neville St, Oldham OL9 6LD</span>
-                </div>
+                
                 <a href="tel:+17196295764" className="flex items-center gap-2 hover:text-primary">
                   <Phone className="h-4 w-4 text-primary" />
                   <span>+1 719-629-5764</span>
