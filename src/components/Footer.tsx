@@ -138,12 +138,12 @@ const Footer = () => {
               <h3 className="font-heading font-bold text-lg mb-6">Contact Us</h3>
               <ul className="space-y-4">
 
-                <li>
+                {/* <li>
                   <a href="tel:+1 719-629-5764" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
                     <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                     +1 719-629-5764
                   </a>
-                </li>
+                </li> */}
             
                 <li>
                   <a href="mailto:swiftlanelogisticsagency@gmail.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors">
