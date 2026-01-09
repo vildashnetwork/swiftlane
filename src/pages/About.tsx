@@ -148,21 +148,21 @@ const About = () => {
 
             <div className="bg-background/5 rounded-2xl p-8 backdrop-blur-sm border border-background/10">
               <h3 className="font-heading font-bold text-2xl mb-6">Contact Information</h3>
-              <div className="space-y-4">
+              {/* <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
 
-                </div>
+                </div> */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
+                <div>
                     <p className="font-heading font-semibold mb-1">Phone</p>
-                    <a href="tel:+1 719-629-5764" className="text-background/70 hover:text-primary transition-colors block">
-                      +1 719-629-5764
+                    <a href="email: swiftlanelogisticsagency@gmail.com" className="text-background/70 hover:text-primary transition-colors block">
+                     swiftlanelogisticsagency@gmail.com
                     </a>
                 
                   </div>
