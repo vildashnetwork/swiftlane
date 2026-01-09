@@ -32,10 +32,10 @@ const Header = () => {
               </div>
             </div>
             <div className="flex items-center gap-6">
-              <a href="tel:+1 719-629-5764" className="flex items-center gap-2 hover:text-primary transition-colors">
+              {/* <a href="tel:+1 719-629-5764" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+1 719-629-5764</span>
-              </a>
+              </a> */}
               <a href="mailto:swiftlanelogisticsagency@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 text-primary" />
                 <span>swiftlanelogisticsagency@gmail.com
@@ -123,10 +123,10 @@ const Header = () => {
               {/* Mobile Contact Info */}
               <div className="mt-6 pt-4 border-t border-border space-y-3 text-sm text-muted-foreground">
                 
-                <a href="tel:+17196295764" className="flex items-center gap-2 hover:text-primary">
+                {/* <a href="tel:+17196295764" className="flex items-center gap-2 hover:text-primary">
                   <Phone className="h-4 w-4 text-primary" />
                   <span>+1 719-629-5764</span>
-                </a>
+                </a> */}
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-primary" />
                   <span>Open 24/7</span>
