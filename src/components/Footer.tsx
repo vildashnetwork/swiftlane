@@ -40,13 +40,13 @@ const Footer = () => {
             >
               Get a Quote! <ArrowRight className="h-5 w-5" />
             </Link>
-            <a
+            {/* <a
               href="tel:+1 719-629-5764"
               className="inline-flex items-center gap-2 text-primary-foreground font-heading font-semibold hover:underline"
             >
               <Phone className="h-5 w-5" />
               +1 719-629-5764
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
