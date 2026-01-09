@@ -824,18 +824,18 @@ const Contact = () => {
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
-                    <div>
+                    {/* <div>
                       <p className="font-heading font-semibold mb-1">Address</p>
                       <p className="text-background/70">
                         Unit 6, Neville, Neville St,<br />Oldham OL9 6LD
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
-                    <div>
+                    {/* <div>
                       <p className="font-heading font-semibold mb-1">Phone</p>
                       <a
                         href="tel:+1 719-629-5764"
@@ -844,7 +844,7 @@ const Contact = () => {
                         +1 719-629-5764
                       </a>
                       
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
